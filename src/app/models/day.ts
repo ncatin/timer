@@ -3,7 +3,9 @@ import { DairyCount } from "./dairy-count";
 export interface Day {
     date: Date;
     startTime: string;
-    endtime: string;
+    endTime: string;
+    time: number;
+    rate: number;
     count: number;
     dairy: boolean;
     totalDairyCount: number;
