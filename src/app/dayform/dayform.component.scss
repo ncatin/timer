@@ -1,0 +1,21 @@
+.flex-container{
+    display: flex;
+    width: fit-content;
+    place-items: center;
+    align-content: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.flex-child{
+    flex: 1;
+    padding: 1px;
+    width: 150px;
+    text-align: center;
+}
+
+.container {
+    place-items: center;
+    width: 100%;
+    max-width: 35rem;
+}

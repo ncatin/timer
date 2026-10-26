@@ -1,3 +1,22 @@
 <div id="dayform">
-  
+    <div class="flex-container">
+        <div class="flex-child">
+            <p>Date: </p>
+        </div>
+        <div class="flex-child">
+            <ion-datetime-button datetime="datetime"></ion-datetime-button>
+            <ion-modal [keepContentsMounted]="true">
+                <ng-template>
+                    <ion-datetime id="datetime" (ionChange)="onDateSelected($event)" presentation="date"></ion-datetime>
+                </ng-template>
+            </ion-modal>
+        </div>
+    </div>
+
+
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+        <div>
+            <label for=""></label>
+        </div>
+    </form>
 </div>
