@@ -1,15 +1,11 @@
 import { DairyCount } from "./dairy-count";
+import { Aisle } from "./aisle";
 
 export interface Day {
-    date: Date;
-    startDate: Date;
-    endDate: Date;
-    startTimeString: string;
-    endTimeString: string;
-    time: number;
-    rate: number;
-    count: number;
-    dairy: boolean;
-    totalDairyCount: number;
-    dairyCounts: DairyCount[];
+    id: number;
+    date?: Date;
+    dairy?: boolean;
+    totalDairyCount?: number;
+    dairyCounts?: DairyCount[];
+    aisles?: Aisle[];
 }

@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      List Of Days
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -12,6 +12,18 @@
       <ion-title size="large">Tab 2</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-button (click)="newDay()" class="container">New Day</ion-button>
+  <ul class="ul-container">
+    @for (day of days | keyvalue; track day.key) {
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+      <li>
+        
+        <div> {{day.value.date}} </div>
+        <div>
+          <ion-button (click)="selectDay(day.value.id)">Select Day</ion-button>
+        </div>
+        
+      </li>
+    }
+  </ul>
 </ion-content>

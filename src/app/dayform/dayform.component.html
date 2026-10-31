@@ -1,4 +1,4 @@
-<div id="dayform">
+<div id="dayform" class="container">
     <div class="flex-container">
         <div class="flex-child">
             <p>Date: </p>
@@ -12,7 +12,14 @@
             </ion-modal>
         </div>
     </div>
-
+    <ion-button (click)="newAisle()">New Aisle</ion-button>
+    <ul>
+        @for (listedAisle of today.aisles; track $index) {
+            <li>
+                <app-aisle [aisle] = "listedAisle"/>
+            </li>
+        }
+    </ul>
 
     <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
         <div>

@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Current Day
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -12,11 +12,13 @@
       <ion-title size="large">Days</ion-title>
     </ion-toolbar>
   </ion-header>
-  <div class="ion-text-center">
-    <ion-button (click)="newDay()">New Day</ion-button>
-    <ng-container #container></ng-container>
-    <app-dayform></app-dayform>
-  </div>
+  @if(!selectDay){
+    <div class="ion-text-center">
+      <app-dayform [input] = "currentDay" ></app-dayform>
+    </div>
+  }@else{
+    <ion-button (click)="SelectDay()" class="container">Select Day</ion-button>
+  }
+  
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
 </ion-content>

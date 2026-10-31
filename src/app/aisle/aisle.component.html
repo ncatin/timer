@@ -1,0 +1,15 @@
+<div class="flex-container">
+  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+        <div class="flex-child">
+            <label for="startTime"></label>
+        </div>
+        <div class="flex-child">
+            <ion-datetime-button datetime="time"></ion-datetime-button>
+            <ion-modal [keepContentsMounted]="true">
+                <ng-template>
+                    <ion-datetime id="datetime" formControlName="startTime" presentation="time"></ion-datetime>
+                </ng-template>
+            </ion-modal>
+        </div>
+    </form>
+</div>

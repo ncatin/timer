@@ -1,5 +1,8 @@
 .container {
+    display: flex;
     place-items: center;
-    width: 100%;
-    max-width: 35rem;
+    justify-items: center;
+    width:fit-content;
+    margin: 0 auto;
+    align-content: center;
 }
